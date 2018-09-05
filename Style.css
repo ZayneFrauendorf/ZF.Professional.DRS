@@ -71,6 +71,11 @@ body {
     margin-top: 5px;
 }
 
+.logo img:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
 .main-nav-item-ctr {
     display: flex;
     align-items: center;
@@ -390,7 +395,7 @@ footer {
     }
     .main-nav-item-ctr {
         justify-content: space-between;
-        margin-right: 0px;
+        margin-right: 20px;
     }
     .main-nav-item-ctr li {
         margin-left: 10px;
@@ -404,13 +409,15 @@ footer {
         margin-left: 30px;
         max-width: 100px;
     }
+
     .swiper-container {
         max-width: 280px!important;
     }
+
     .sticker {
-        max-width: 80px;
-        right: 18px!important;
-        bottom: -20px!important;
+        max-width: 110px;
+        right: 25px!important;
+        bottom: -50px!important;
     }
     .sticker img {
         width: 100%;
