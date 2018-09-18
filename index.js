@@ -1,5 +1,5 @@
 
-
+// InfoModule to store information in one place for easier amendments and accuracy
 var infoModule = (function () {
   let email = 'accounts@drsvsd.co.nz';
   let phone = '0800 377 873';
@@ -63,11 +63,15 @@ var infoModule = (function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Get url to find which page user is on.
   var url = window.location.href;
+
+  // Place infoModule info on page.
   infoModule.emailProvided();
   infoModule.phoneProvided();
   infoModule.copyrightInfoProvided();
 
+  // Check if user is on the contact page
   if (url.match(/contact/g)) {
 
     infoModule.christchurchAddressProvided();
@@ -86,13 +90,14 @@ document.addEventListener("DOMContentLoaded", function () {
         item.innerHTML = item.innerHTML + addition;
       }
     }
-
+    // If user isn't on the contact page, they must be on the index page.
   } else {
     const nodelist = document.querySelectorAll('#nav-item');
     nodelist.forEach((element) => {
       element.innerHTML === "Home" ? element.style.color = "red" : element.style.color = "black"
     });
 
+    // Swiper creation for the third party slider.
     var swiper = new Swiper('.swiper-container', {
       spaceBetween: 30,
       centeredSlides: true,
