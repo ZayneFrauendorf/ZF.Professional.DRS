@@ -292,6 +292,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width:200px;
 }
 
 .contact-col p {
@@ -331,6 +332,18 @@ footer {
 /*   TODO   */
 
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 800px) {
+    .swiper-container {
+        max-width: 500px!important; 
+        max-height: 200px!important;
+    }
+
+    .sticker {
+        bottom: -80px!important;
+    }
+}
+
 
 @media screen and (max-width: 480px) {
     .upper-most-nav {
